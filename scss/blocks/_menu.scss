@@ -186,8 +186,13 @@
 }
 
 .btn__btn {
-    padding-bottom: 47px;
-}
+    margin-bottom: 47px;
+    @include mediaTablet {
+      &:active {
+        background-color: $green-btn;
+      }
+    }
+  }
 
 .btn__availability {
     max-width: 100%;

@@ -821,7 +821,12 @@ main {
 }
 
 .btn__btn {
-  padding-bottom: 47px;
+  margin-bottom: 47px;
+}
+@media screen and (max-width: 999px) {
+  .btn__btn:active {
+    background-color: #C8FF8C;
+  }
 }
 
 .btn__availability {

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Hotel</title>
+    <script src="https://kit.fontawesome.com/b4f195c594.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
+</head>
+<body>
+    <header class="header none1" id="menu">
+           <div class="header__top">
+                <div class="container">
+                    <div class="header__top-row">
+                        <a class="title-4" href="#">HOTEL</a>
+                        <div class="header__nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li><a href="#prestige">About</a></li>
+                                    <li><a href="#plaza">Service</a></li>
+                                    <li><a href="#rooms">Rooms</a></li>
+                                    <li><a href="#blogs">Blog</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                          
+                        <button id="signUpBtn"  class="btn-2 btn-2--header btn-2--header--mobile">Sign up</button>
+            
+                        <div class="popup">
+                            <div class="popup__wrap">
+                                <div class="popup__form">
+                                    <form action="#" class="form">
+                                        <div class="form__wrap">                
+                                            <input type="text" name="firstName" class="form_inp" placeholder="First Name" required>
+                                            <input type="text" name="lastName" class="form_inp" placeholder="Last Name" required>
+                                        </div>
+                                        <div class="form__wrap">                
+                                            <input type="email" name="email" class="form_inp" placeholder="Email" required>
+                                            <input type="tel" name="tel" class="form_inp" placeholder="Phone">
+                                        </div>
+                                        <textarea name="message" class="form__message" placeholder="Message"></textarea>
+                                        <div class="form__send">
+                                            <label for="subs"><input type="checkbox" name="subs" class="form__subs">subscribe to the newsletter</label>  
+                                            <button type="submit" class="form__btn">send</button>
+                                            
+                                        </div>
+                                    </form> 
+                                </div> 
+                                <i class="fa-solid fa-xmark popup__close"></i>
+                            </div>
+                        </div>
+                        
+
+                        <div class="header__nav-btn">
+                            <button class="nav-icon-btn">
+                                <div class="nav-icon"></div>
+                            </button>
+                        </div>
+
+                    </div>   
+                </div>  
+           </div>
+
+            <div class="container">
+                <h1 class="header__title">Exclusive <br> Boutique <br> Hotel 
+                    <p>Luxury Boutique Hotel</p>
+                </h1>
+                <ul class="header__socials">
+                    <li><a href="#!"><img src="./img/socials/facebook.svg" alt=""></a></li>
+                    <li><a href="#!"><img src="./img/socials/twitter.svg" alt=""></a></li>
+                    <li><a href="#!"><img src="./img/socials/instagram.svg" alt=""></a></li>                         
+                </ul>
+            </div>   
+
+           <div class="header__footer">
+                <div class="container">
+                    
+                        <div class="header__menu">
+
+                            <div class="menu__block-container2">
+                                <div class="menu__block">
+                                    <div class="menu__status">ARRIVAL</div>
+                                    <div class="menu__inputs">
+                                        <div class="menu__data">
+                                            <input type="text" id="arrival-date" class="hidden__input" readonly>
+                                            <div class="placeholder" id="formatted-date-arrival">
+                                                <div class="placeholder__opacity">Select your arrival date</div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__img" id="arrival-img"></div>
+                                    </div>
+                                </div>
+        
+                                <div class="menu__block">
+                                    <div class="menu__status">DEPARTURE</div>
+                                    <div class="menu__inputs">
+                                        <div class="menu__data">
+                                            <input type="text" id="departure-date" class="hidden__input" readonly>
+                                            <div class="placeholder" id="formatted-date-departure">
+                                                <div class="placeholder__opacity">Select your departure date</div>
+                                            </div>
+                                        </div>
+                                        <div class="menu__calendar"></div>
+                                        <div class="menu__img" id="departure-img">
+
+                                        </div>
+
+                                    </div>
+                                </div> 
+                            
+
+                            <div class="menu__block-container1">
+                                <div class="menu__block">
+                                    <div class="menu__container">
+                                        <div class="menu__adults-childrens">ADULTS</div>
+                                    </div>
+                                    <div class="menu__container">
+                                        <button class="btn__btn subtraction">-</button>
+                                        <input type="text" class="menu__childrens-adults" id="adults" max="9" inputmode="numeric">
+                                        <button class="btn__btn add">+</button>
+                                    </div>
+                                </div>
+                                <div class="menu__block">
+                                    <div class="menu__container">
+                                        <div class="menu__adults-childrens">CHILDREN</div>
+                                    </div>
+                                    <div class="menu__container">
+                                        <button class="btn__btn subtraction">-</button>
+                                        <input type="text" class="menu__childrens-adults" id="adults" max="9" inputmode="numeric">
+                                        <button class="btn__btn add">+</button>
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                              
+    
+                            <div class="menu__block menu__block--btn">
+                                <div class="menu__container menu__container--warning">
+                                    <button id="checkAvailability" class="btn__availability">Check Availability</button>
+                                    <p id="warning" class="warning"></p>
+                                    <template id="overlayTemplate">
+                                        <div class="overlay">
+                                            <div class="overlay__content">
+                                                <p id="message"></p>
+                                                <button id="closeOverlay">Close</button>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>    
+                </div>
+                
+            </div>
+    </header>
+
+    <main>
+        <section class="plaza none1" id="plaza">
+            <h2 class="visually-hidden"></h2>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="left left__plaza">
+                        <div class="icon__wrap">
+                            <img src="./img/icons/sleep.png" alt="">
+                        </div>
+                        <div class="plaza__title">
+                            <h1 class="title-2">Luxury Plaza<br>Hotel for You</h1>
+                        </div>
+                        <div class="plaza__text">
+                            <p class="text-2">Distant orb has power to raise and purify our<br>thoughts like a strain of sacred music.</p>
+                        </div>
+                        <div class="plaza__btn">
+                            <button class="btn-2">About us</button>
+                        </div>
+                    </div>
+                    <div class="right right__plaza">
+                            <img src="./img/plaza/Plaza.png" alt="" class="video__img">
+                        <div class="videos videos__plaza">
+                            <a href="https://www.youtube.com/watch?v=MSg8-nW3Ba4&ab_channel=SmallLuxuryHotelsoftheWorld" data-youtubeLightbox class="video__link">
+                                <div class="icons">
+                                    <img src="./img/icons/triangle.png" alt="" class="video__icon">
+                                </div>
+                            </a>  
+                        </div>
+                        <div class="additionals additionals--plaza">
+                            <div class="percent">%</div>
+                            <div class="digit">92</div>
+                            <div class="text">Succeful Booking</div>
+                            <div class="chart">
+                                <img src="./img/plaza/graph.png" alt="" class="graph__icon">
+                            </div>
+                        </div>
+                        <div class="bottom__one"></div>
+                        <div class="bottom__two"></div>
+                        
+                    </div>                 
+                </div>
+            </div>
+        </section>
+
+        <section class="spa none1">
+            <div class="container">
+                <div class="wrapper wrapper__spa">
+                    <div class="left left__spa">
+                        <div class="spa__image">
+                            <img src="./img/spa/spa.png" alt="" class="video__img">
+                        </div>                   
+                        <div class="videos">
+                            <div class="icons icons__spa">
+                                <img src="./img/icons/star.png" alt="" class="video__icon">
+                            </div>
+                            
+                            <p class="video__text">+ $189<br>Additional Price</p>
+                            
+                        </div>
+                        <div class="bottom__one"></div>
+                        <div class="bottom__two"></div>
+                        
+                    </div>
+                    <div class="right right__spa">
+                        <div class="icon__wrap">
+                            <img src="./img/icons/relax.png" alt="">
+                        </div>
+                        <div class="plaza__title">
+                            <h1 class="title-2">Wellness & Spa</h1>
+                        </div>
+                        <div class="plaza__text">
+                            <p class="text-2">Raise and purify our thoughts like a strain of sacred music, or<br>a noble picture, or a passage from the grander poets.</p>
+                        </div>
+                        <div class="plaza__btn">
+                            <button class="btn-2">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants none1">
+            <div class="container">
+                <div class="wrapper wrapper__restaurants">
+                    <div class="left left__restaurants">
+                        <div class="icon__wrap">
+                            <img src="./img/icons/coffee.png" alt="">
+                        </div>
+                        <div class="plaza__title">
+                            <h1 class="title-2">Restaurants<br>& Bars</h1>
+                        </div>
+                        <div class="plaza__text">
+                            <p class="text-2">Distant orb has power to raise and purify<br>our thoughts like a strain of sacred music.</p>
+                        </div>
+                        <div class="plaza__btn">
+                            <button class="btn-2">Reserve a table</button>
+                        </div>
+                    </div>
+                    <div class="right right__restaurants">
+                       
+                            <img src="./img/restaurants/restaurants.png" alt="" class="video__img">
+                        </a> 
+                        <div class="videos">
+                            <div class="icons">
+                                <img src="./img/icons/burger.png" alt="" class="video__icon">
+                            </div>
+                            
+                            <p class="video__text">+ $20<br>Lunch Price</p>
+                            
+                        </div>
+                        <div class="additionals additionals--restaurants">
+                            <img src="./img/restaurants/map.png" alt="" class="graph__icon">
+                            <div class="pins">
+                                <img src="./img/restaurants/pin1.png" alt="" class="pin__1">
+                                <img src="./img/restaurants/pin2.png" alt="" class="pin__2">
+                                <img src="./img/restaurants/pin3.png" alt="" class="pin__3">
+                            </div>
+
+                        </div>
+                        <div class="bottom__one"></div>
+                        <div class="bottom__two"></div>                
+                    </div> 
+                </div>    
+
+            </div>
+        </section>
+
+        <section class="advantages none1">
+            <div class="container">
+                <div class="advantages__title">
+                    <h1 class="title-2">Advantages</h1>
+                </div>
+                <div class="wrapper wrapper__advantages">
+                    <div class="left">
+                        <div class="wifi">
+                            <div class="wifi__img">
+                                <img class="advantages__img" src="./img/advantages/advantages.png" alt="">
+                            </div>
+                            <div class="icon__wrap icon__wrap--wifi">
+                                <img src="./img/icons/wifi.png" alt="">
+                            </div>
+                            <div class="wifi__text">
+                                <h1 class="title-2">Free Wi-Fi</h1>
+                                <p class="text-2 text-2--mt">Distant orb has power to raise and purify our thoughts like a strain<br>of sacred music, or a noble picture, or a passage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="right__top">
+                            <div class="events">
+                                <div class="icon__wrap icon__wrap--events">
+                                    <img src="./img/icons/fireworks.png" alt="">
+                                </div>
+                                <div class="events__text">
+                                    <h1 class="title-3">Special Events</h1>
+                                    <p class="text-3 text-3--mobile">Distant orb has power to raise and purify our<br>thoughts like a strain of sacred music, or a noble<br>picture, or a passage from the grander poets.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right__bottom">
+                            <div class="bottom__item">
+                                <div data-blue-icon class="icon__wrap icon__wrap--item">
+                                    <img src="./img/icons/record.png" alt="">
+                                </div>
+                                <div class="events__text events__text--bottom">
+                                    <h1 class="title-3">Best Price</h1>
+                                    <p class="text-3">Power to raise and purify<br>our thoughts like a strain.</p>
+                                </div>
+                            </div>
+                            <div class="bottom__item">
+                                <div class="icon__wrap icon__wrap--item">
+                                    <img src="./img/icons/calendar.png" alt="">
+                                </div>
+                                <div class="events__text events__text--bottom">
+                                    <h1 class="title-3">Free Cancellation</h1>
+                                    <p class="text-3">Like a strain of sacred<br>music, or a noble picture.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="rooms none1" id="rooms">
+            <div class="container container_slick">
+                <div class="rooms__top">
+                    <h1 class="title-2">Rooms</h1>
+                    <p class="text-2 text-2--rooms">Distant orb has power to raise and purify our thoughts like a strain of sacred music.</p>
+                </div>
+                <div class="rooms__bottom carousel">
+                    <div class="bottom__item bottom__item--room slide">
+                        <div class="icon__wrap icon__wrap--room">
+                            <img src="./img/rooms/room2.png" alt="">
+                        </div>
+                        <div class="events__text room__text--bottom">
+                            <h1 class="title-4">Double Room</h1>
+                            <p class="text-3 text-3--mt">Power to raise and purify our thoughts like a strain of sacred music.</p>
+                        </div>
+                        <button class="btn-2 btn-2--room">BOOK NOW</button>
+                        <div class="bottom__one bottom__one--rooms"></div>
+                        <div class="bottom__two bottom__two--rooms"></div>
+                        <div class="room__price">From $199</div>
+                    </div>
+
+
+                    <div class="bottom__item bottom__item--room slide">
+                        <div class="icon__wrap icon__wrap--room">
+                            <img src="./img/rooms/room1.png" alt="">
+                        </div>
+                        <div class="events__text room__text--bottom">
+                            <h1 class="title-4">Classic Room</h1>
+                            <p class="text-3 text-3--mt">Distant orb has power to raise and purify our thoughts like a strain.</p>
+                        </div>
+                        <button class="btn-2 btn-2--room">BOOK NOW</button>
+                        <div class="bottom__one bottom__one--rooms"></div>
+                        <div class="bottom__two bottom__two--rooms"></div>
+                        <div class="room__price">From $99</div>
+                    </div>
+
+                    
+
+                    <div class="bottom__item bottom__item--room slide">
+                        <div class="icon__wrap icon__wrap--room">
+                            <img src="./img/rooms/room3.png" alt="">
+                        </div>
+                        <div class="events__text room__text--bottom">
+                            <h1 class="title-4">Super Room</h1>
+                            <p class="text-3 text-3--mt">Raise and purify our thoughts like a<br>strain of sacred music, or a noble.</p>
+                        </div>
+                        <button class="btn-2 btn-2--room">BOOK NOW</button>
+                        <div class="bottom__one bottom__one--rooms"></div>
+                        <div class="bottom__two bottom__two--rooms"></div>
+                        <div class="room__price">From $299</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="prestige none1" id="prestige"> 
+            <div class="container">
+                <div class="prestige__list">
+                    <div class="prestige__item">
+                        <div class="circle">73</div>
+                        <h1 class="title-3 title-3--prestige">Super Suites</h1>
+                    </div>    
+                    <div class="prestige__item">
+                        <div class="circle">42</div>
+                        <h1 class="title-3 title-3--prestige">Years of Expirience</h1>
+                    </div>    
+                    <div class="prestige__item">
+                        <div class="circle">50</div>
+                        <h1 class="title-3 title-3--prestige">Family Rooms</h1>
+                    </div>    
+                    <div class="prestige__item">
+                        <div class="circle">99</div>
+                        <h1 class="title-3 title-3--prestige">Hotel Personal</h1>
+                    </div>  
+                </div>
+  
+            </div>
+        </section> 
+
+        <section class="testimonials none1" id="testimonials">
+            <div class="container">
+                <div class="testimonials__title">
+                    <h1 class="title-2">Testimonials</h1>
+                </div>
+                <div class="testimonials__row carousel__testimonials none1">
+                    <div class="testimonials__item slide">
+                        <div class="item__review">
+                            <h1 class="title-4 title-4--review">My Best<br>Vacation</h1>
+                            <p class="review__text">"Distant orb has power to raise and purify our thoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed."</p>
+                        </div>
+                        <div class="testimonials__rating">
+                            <div class="rating__img">
+                                <img src="./img/testimonials/person1.png" alt="">
+                            </div>
+                            <div class="rating__descr">
+                                <p class="text-2">Aasiya Jayavant</p>
+                                <img src="./img/testimonials/stars.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom__one bottom__one--testimonials"></div>
+                        <div class="bottom__two bottom__two--testimonials"></div>
+                        <div class="commas">
+                            <img src="./img/testimonials/commas.png" alt="">
+                        </div>
+                    </div>
+               
+                    <div class="testimonials__item slide">
+                        <div class="item__review">
+                            <h1 class="title-4 title-4--review">Very Good<br>Hotel</h1>
+                            <p class="review__text">"Peep at some distant orb has power to raise and purify ourthoughts like a strain of sacred music, or a noble picture, or a passage from the grander poets. It always does one good.Apparently we had reached a great height in the atmosphere, for the sky was a dead black."</p>
+                        </div>
+                        <div class="testimonials__rating">
+                            <div class="rating__img">
+                                <img src="./img/testimonials/person2.png" alt="">
+                            </div>
+                            <div class="rating__descr">
+                                <p class="text-2">Cameron Rogers</p>
+                                <img src="./img/testimonials/stars.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bottom__one bottom__one--testimonials"></div>
+                        <div class="bottom__two bottom__two--testimonials"></div>
+                        <div class="commas">
+                            <img src="./img/testimonials/commas.png" alt="">
+                        </div>
+                    </div>   
+            </div>
+        </section>
+
+        <section class="blogs none1" id="blogs">
+            <div class="container container__blog none1">
+                <div class="blogs__top none1">
+                    <h1 class="title-2">From Blog</h1>
+                </div>
+                <div class="blogs__bottom carousel__blogs none1">
+                    <div class="bottom__item bottom__item--blogs slide none1">
+                        <div class="icon__wrap icon__wrap--blogs none1">
+                            <img src="./img/blogs/blog1.png" alt="">
+                        </div>
+                        <div class="events__text blogs__text--bottom none1">
+                            <h1 class="title-4">Where Travel<br>this Summer</h1>
+                            <p class="text-3 text-3--mt">Distant orb has power to raise and<br>purify our thoughts like a strain.</p>
+                        </div>
+                        <div class="bottom__one bottom__one--blogs none1"></div>
+                        <div class="bottom__two bottom__two--blogs none1"></div>
+                        <div class="blogs__price none1">12/23</div>
+                    </div>
+
+                    <div class="bottom__item bottom__item--blogs slide none1">
+                        <div class="icon__wrap icon__wrap--blogs none1">
+                            <img src="./img/blogs/blog2.png" alt="">
+                        </div>
+                        <div class="events__text blogs__text--bottom none1">
+                            <h1 class="title-4">Better Places<br>for Traveling</h1>
+                            <p class="text-3 text-3--mt">Power to raise and purify our thoughts<br>like a strain of sacred music.</p>
+                        </div>     
+                        <div class="bottom__one bottom__one--blogs none1"></div>
+                        <div class="bottom__two bottom__two--blogs none1"></div>
+                        <div class="blogs__price none1">10/23</div>
+                    </div>
+
+                    <div class="bottom__item bottom__item--blogs slide none1">
+                        <div class="icon__wrap icon__wrap--blogs none1">
+                            <img src="./img/blogs/blog3.png" alt="">
+                        </div>
+                        <div class="events__text blogs__text--bottom none1">
+                            <h1 class="title-4">Why Our Hotel<br>is the Best Place</h1>
+                            <p class="text-3 text-3--mt">Raise and purify our thoughts like a<br>strain of sacred music, or a noble.</p>
+                        </div>
+                        <div class="bottom__one bottom__one--blogs none1"></div>
+                        <div class="bottom__two bottom__two--blogs none1"></div>
+                        <div class="blogs__price none1">07/23</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="photos none1">
+            <div class="container__photos">
+                <div class="photos__img">
+                    <img src="./img/photos/photos1.png" class="photo__item" alt="">
+                    <img src="./img/photos/photos2.png" class="photo__item" alt="">
+                    <img src="./img/photos/photos3.png" class="photo__item" alt="">
+                    <img src="./img/photos/photos4.png" class="photo__item" alt="">
+                    <img src="./img/photos/photos5.png" class="photo__item" alt="">
+                    <img src="./img/photos/photos6.png" class="photo__item" alt="">  
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer none1">
+        <section class="footer__top none1"> 
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__up">
+                        <a href="#" class="title-4">HOTEL</a>
+                        <ul class="footer__nav-list1">
+                            <li class="footer__item">
+                                <img src="./img/footer/phone.png" alt="">
+                                <a href="#">(4321) 0987-654-320</a>
+                            </li>
+                            <li class="footer__item">
+                                <img src="./img/footer/mail.png" alt="">
+                                <a href="#">support@hotel.com</a>
+                            </li>
+                            <li class="footer__item">
+                                <img src="./img/footer/address.png" alt="">
+                                <a href="#">33 Jaja Park Rd, Yellow, USA</a>
+                            </li>                     
+                        </ul>
+                    </div>
+    
+                    <div class="footer__middle">
+                        <div class="footer__nav">
+                            <nav>
+                                <ul class="footer__nav-list2">
+                                    <li><a href="#menu">Menu</a></li>
+                                    <li><a href="#prestige">About</a></li>
+                                    <li><a href="#plaza">Service</a></li>
+                                    <li><a href="#rooms">Rooms</a></li>                   
+                                </ul>
+                            </nav> 
+                        </div>  
+                        <div class="footer__nav">
+                            <nav>
+                                <ul class="footer__nav-list3">
+                                    <li><a class="empty-column" href="#!"></a></li>
+                                    <li><a href="#testimonials">Testimonials</a></li>
+                                    <li><a href="#blogs">Blog</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                  
+    
+                    <div class="footer__nav">
+                        <nav>
+                            <ul class="footer__nav-list4">
+                                <li>Subscribe</li>
+                                <div class="input-group">
+                                    <input type="text" class="footer__input" placeholder="Email">
+                                    <button class="image-button" type="submit" onclick="location.reload()">
+                                        <img src="./img/footer/send.png" alt="Button Image">
+                                    </button>
+                                    
+                                </div>
+                                <li>No spam. Only profit.</li>
+                            </ul>
+                        </nav>
+                    </div> 
+                </div>
+            </div>       
+            
+    </section>
+        <section class="footer__bottom none1" id="contact">
+            <div class="container">
+                <div class="footer__down">
+                    <div class="bottom__all">
+                        <ul class="header__socials header__socials--footer">
+                            <li><a href="#!"><img src="./img/socials/facebook.svg" alt=""></a></li>
+                            <li><a href="#!"><img src="./img/socials/twitter.svg" alt=""></a></li>
+                            <li><a href="#!"><img src="./img/socials/instagram.svg" alt=""></a></li>                         
+                        </ul>
+                        
+                        <div class="licence__text">
+                            <p>Copyright © 2019 Hotel.</p>
+                            <p>All Rights Reserved.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </footer> 
+
+   <!-- YouTube LightBox -->
+   <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
+    <script src="./js/main.js"></script>
+    
+
+</body>
+</html>
+

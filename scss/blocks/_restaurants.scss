@@ -1,0 +1,45 @@
+.restaurants {
+    background-color: $bg-color;
+    min-height: 880px;
+}
+
+.right__restaurants {
+    width: 100%;
+    max-width: 570px;
+    position: relative;
+
+    @include mediaTablet {
+        margin-top: 80px;
+    }
+
+    @include mediaMobile {
+        width: 100%;
+        max-width: 347px;
+    }
+}
+
+.additionals--restaurants {
+    @media  screen and (max-width: 650px) {
+        right: -17px;
+    }
+}
+
+.pin__1 {
+    position: absolute;
+    top: 132px;
+    right: 47px;
+}
+
+.pin__2 {
+    position: absolute;
+    top: 99px;
+    left: 49px;
+}
+
+
+.pin__3 {
+    position: absolute;
+    top: 43px;
+    left: 95px;
+}
+

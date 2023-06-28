@@ -1,0 +1,132 @@
+.footer {
+    background-color: $blue-menu;
+    min-height: 416px;
+    height: 100%;
+}
+
+.footer__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 86px;
+
+    @media screen and (max-width: $tablet-owners) {
+        flex-direction: column;
+        
+    }
+}
+
+.footer__up {
+    margin-top: 80px;
+    @media screen and (max-width: $tablet-owners) {
+        margin-left: -35px;
+        
+    }
+
+}
+
+
+.empty-column::before {
+    content: '';
+    display: inline-block;
+    width: 100px;
+    height: 1em;
+    visibility: hidden;
+    margin-bottom: 24px;
+}
+
+.footer__nav {
+    margin-top: 80px; 
+}
+
+.footer__nav-list2 li:first-child {
+    margin-bottom: 23px;
+}
+
+.footer__nav-list4 {
+    @media screen and (max-width: $tablet-owners) {
+        margin-left: -35px;
+        
+    }
+}
+
+.footer__middle {
+    display: flex;
+    gap: 146px;
+
+    @media screen and (max-width: $tablet-owners) {
+        
+    }
+}
+
+.footer__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer__input {
+    width: 270px;
+    height: 48px;
+    padding: 12px;
+    margin-top: 23px;
+    margin-bottom: 17px;
+    background-color: $white; 
+    color: black;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in;
+}
+
+.input-group {
+    position: relative;
+    display: inline-block;
+}
+
+.bottom__all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $white;
+
+    @media screen and (max-width: $semi-tablet) {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.bottom__all p {
+    @media  screen and (max-width: 425px) {
+        display: block;
+        white-space: normal;
+    }
+}
+
+.footer__bottom {
+    min-height: 111px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $footer-bottom;
+    
+}
+
+.header__socials--footer {
+    padding-top: 0;
+}
+
+.image-button {
+    position: absolute;
+    top: 41%;
+    background-color: #FFFFFF;
+    right: 3.5%;
+}
+
+.licence__text {
+    display: flex;
+    @media screen and (max-width: 425px) {
+        flex-direction: column;
+        align-items: center;
+        
+}
+}

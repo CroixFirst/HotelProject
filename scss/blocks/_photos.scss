@@ -1,0 +1,32 @@
+.container__photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .photos__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+  
+  .photo__item {
+    width: calc(100% / 6); 
+    max-width: 100%;
+    height: auto;
+
+    @media screen and (max-width: 767px) {
+        width: calc(100% / 3); 
+    }
+
+    @media screen and (max-width: 375px) {
+        width: calc(100% / 2); 
+    }
+
+}
+  
+  
+ 
+  

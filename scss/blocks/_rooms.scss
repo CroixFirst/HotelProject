@@ -1,0 +1,244 @@
+.rooms {
+    min-height: 880px;
+    // background-color: $bg-color;
+    position: relative;
+    z-index: 0;
+}
+
+.rooms__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 42px;
+    padding-top: 86px;
+
+    @media only screen and (max-width: 626px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 380px) {
+        padding: 50px 11px 0 11px;
+    }
+}
+
+.rooms__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 36px;
+}
+
+.text-2--rooms {
+    @media only screen and (max-width: 380px) {
+        font-size: 17px;
+    }
+}
+
+.bottom__item--room {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    height: 576px;
+
+
+    @media screen and (max-width: 626px) {
+        max-width: 346px;
+        width: 100%;
+        max-height: 100%;
+        height: 608px;
+        
+    }
+
+    @media screen and (max-width: 380px) {
+        // max-width: 310px;
+        max-width: 291px;
+        width: 100%;
+        max-height: 100%;
+        height: 608px;
+        box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.5);
+        
+    }
+}
+
+.icon__wrap--room {
+    width: 324px;
+    height: 275px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    border: none;
+
+    @media screen and (max-width: 626px) {
+        padding: 24px 29px 40px 0px;
+    }
+
+    @media screen and (max-width: 380px) {
+        padding: 0px 82px 40px 1px;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+.bottom__one--rooms {
+    width: 91%;
+    right: 17px;
+    z-index: -1;
+}
+
+.bottom__two--rooms {
+    width: 74%;
+    right: 46px;
+    z-index: -2;
+}
+
+
+.btn-2--room {
+    margin-bottom: 48px;
+    margin-top: 16px;
+
+    @media only screen and (max-width: 380px) {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+
+.room__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 144px;
+    height: 64px;
+    left: 48px;
+    top: 48px;
+    background-color: $white;
+    border-radius: 15px;
+
+    @media only screen and (max-width: 380px) {
+        width: 131px;
+        height: 53px;
+    }
+}
+
+
+
+
+/* the slides */
+
+.slick-slider {
+    width: 1191px;
+    margin: 0px auto;
+    z-index: 0;
+    padding-bottom: 80px;
+
+    @media  screen and (max-width: 1300px) {
+        width: 385px;
+    }
+    @media  screen and (max-width: 626px) {
+        width: 366px;
+    }
+    @media  screen and (max-width: 380px) {
+        width: 337px;
+    }
+    
+    
+}
+
+.slick-slide {
+    margin: 50px 15px;
+    padding: 0 24px;
+
+    @media only screen and (max-width: 380px) {
+        margin-left: 41px;
+    }
+    
+
+   
+}
+
+.slick__arrow {
+    position: absolute;
+    
+}
+
+.slick-prev {
+   
+    left: -20px;
+    z-index: 1;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @media screen and (max-width: 626px) {
+        left: -16px;
+    }
+    @media screen and (max-width: 380px) {
+        left: -2px;
+    }
+}
+
+.slick-next {
+    right: -5px;
+    margin: 0 auto;
+    cursor: pointer;
+    @media screen and (max-width: 626px) {
+        right: 5px;
+    }
+    @media screen and (max-width: 380px) {
+        right: 3px;
+    }
+}
+
+  
+.slick-active {
+    background-color: $blue-menu;
+
+    .room__text--bottom {
+        color: white;
+    }
+
+    .btn-2--room {
+        background-color: $green-btn;
+    }
+
+    .bottom__one--rooms {
+        background-color: $blue-menu;
+    }
+
+    .bottom__two--rooms {
+        background-color: $blue-menu;
+    }
+
+
+}
+
+
+
+
+
+
+/* the parent */
+// .slick-list {
+//     margin: 0px 0px;
+//     width: 1386px;
+//     height: 716px;
+
+//     // margin: 2px -508px;
+//     // width: 1725px;
+//     // height: 716px;
+    
+// }
+
+
+
+// // .slick-prev {
+// //     position: absolute;
+// //     top: 100px;
+// //     right: 100px;
+// // }
+

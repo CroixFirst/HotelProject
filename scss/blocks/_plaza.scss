@@ -1,0 +1,70 @@
+.plaza {
+    background-color: $bg-color;
+    min-height: 880px;
+}
+
+
+.right__plaza {
+    position: relative;
+    width: 100%;
+    max-width: 570px;
+
+    @include mediaTablet {
+        margin-top: 80px;
+    }
+
+    @include mediaMobile {
+        width: 100%;
+        max-width: 347px;
+    }
+
+}
+
+.videos__plaza {
+    justify-content: center;
+}
+
+.plaza__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.additionals--plaza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @media  screen and (max-width: 650px) {
+        right: -17px;
+    }
+}
+
+.percent {
+    position: absolute;
+    top: 13%;
+    left: 25%;
+    font-size: 24px;
+}
+
+.digit {
+    padding-top: 36px;
+    font-size: 56px;
+}
+
+.text {
+    margin-bottom: 27px;
+    position: absolute;
+    bottom: 35%;
+}
+
+.chart {
+    padding-bottom: 32px;
+}
+
+
+
+

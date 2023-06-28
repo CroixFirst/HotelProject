@@ -1,0 +1,24 @@
+.spa {
+    min-height: 880px;
+}
+
+.left__spa {
+    position: relative;
+    width: 100%;
+    max-width: 570px;
+    @include mediaTablet {
+        margin-bottom: 80px;
+    }
+
+    @include mediaMobile {
+        width: 100%;
+        max-width: 347px;
+    }
+
+}
+
+
+
+.icons__spa {
+    background-color: #7F95AE;
+}
